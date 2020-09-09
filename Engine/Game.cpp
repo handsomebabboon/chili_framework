@@ -47,13 +47,27 @@ void Game::UpdateModel()
 {
     dude.Move(wnd.kbd);
     dude.ClampScreen();
+
+    poo0.processConsumption(dude);
+    poo1.processConsumption(dude);
+    poo2.processConsumption(dude);
+
 }
 
 void Game::ComposeFrame()
 {
     dude.Draw(gfx);
 
-    poo0.Draw(gfx);
-    poo1.Draw(gfx);
-    poo2.Draw(gfx);
+    if (!poo0.IsEaten()) {
+        poo0.Draw(gfx);
+    }
+
+    if (!poo1.IsEaten()) {
+        poo1.Draw(gfx);
+    }
+
+    if (!poo2.IsEaten()) {
+        poo2.Draw(gfx);
+    }
+
 }

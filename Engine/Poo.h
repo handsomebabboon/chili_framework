@@ -7,7 +7,8 @@ public:
 	Poo(int in_x, int in_y);
 	void Draw(Graphics& gfx);
 	void Move();
-	bool processConsumption(Dude& dude);
+	void processConsumption(Dude& dude);
+	bool IsEaten();
 private:
 	int x;
 	int y;

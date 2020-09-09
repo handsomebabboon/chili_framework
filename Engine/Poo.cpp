@@ -267,7 +267,7 @@ void Poo::Move()
 
 }
 
-bool Poo::processConsumption(Dude& dude)
+void Poo::processConsumption(Dude& dude)
 {	
 	const int dudeRight = dude.GetX() + dude.GetWidth();
 	const int dudeBottom = dude.GetY() + dude.GetHeight();
@@ -275,6 +275,13 @@ bool Poo::processConsumption(Dude& dude)
 	const int bottom = y + height;
 	const int right = x + width;
 
-	return dude.GetX() < right && dudeRight > x && dudeBottom > y && dude.GetY() < bottom;
+	if (dude.GetX() < right && dudeRight > x&& dudeBottom > y&& dude.GetY() < bottom) {
+		isEaten = true;
+	};
+}
+
+bool Poo::IsEaten()
+{
+	return isEaten;
 }
 
