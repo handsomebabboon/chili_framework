@@ -8,6 +8,11 @@ public:
 	void Draw(Graphics& gfx);
 	void Move(Keyboard& kbd);
 	void ClampScreen();
+	int GetX();
+	int GetY();
+	int GetHeight();
+	int GetWidth();
+
 private:
 	int x;
 	int y;

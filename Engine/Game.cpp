@@ -28,7 +28,10 @@ Game::Game( MainWindow& wnd )
     rng(rd()),
     xDist(0,770),
     yDist(0,570),
-    dude(xDist(rng),yDist(rng))
+    dude(xDist(rng),yDist(rng)),
+    poo0(xDist(rng),yDist(rng)),
+    poo1(xDist(rng), yDist(rng)),
+    poo2(xDist(rng), yDist(rng))
 {
 }
 
@@ -49,4 +52,8 @@ void Game::UpdateModel()
 void Game::ComposeFrame()
 {
     dude.Draw(gfx);
+
+    poo0.Draw(gfx);
+    poo1.Draw(gfx);
+    poo2.Draw(gfx);
 }

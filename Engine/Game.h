@@ -25,6 +25,7 @@
 #include "Graphics.h"
 #include <random>
 #include "Dude.h"
+#include "Poo.h"
 class Game
 {
 public:
@@ -49,6 +50,9 @@ private:
     std::uniform_int_distribution<int> yDist;
     
     Dude dude;
+    Poo poo0;
+    Poo poo1;
+    Poo poo2;
 
 	/********************************/
 };

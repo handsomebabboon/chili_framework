@@ -370,3 +370,23 @@ void Dude::ClampScreen()
 
 
 }
+
+int Dude::GetX()
+{
+	return x;
+}
+
+int Dude::GetY()
+{
+	return y;
+}
+
+int Dude::GetHeight()
+{
+	return height;
+}
+
+int Dude::GetWidth()
+{
+	return width;
+}
