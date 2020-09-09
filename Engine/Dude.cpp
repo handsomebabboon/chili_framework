@@ -326,3 +326,47 @@ void Dude::Draw(Graphics& gfx)
 	gfx.PutPixel(12 + x, 19 + y, 0, 0, 0);
 
 }
+
+void Dude::Move(Keyboard& kbd)
+{
+	if (kbd.KeyIsPressed(VK_UP)) {
+		y -= speed;
+	}
+
+	if (kbd.KeyIsPressed(VK_DOWN)) {
+		y += speed;
+	}
+
+	if (kbd.KeyIsPressed(VK_RIGHT)) {
+		x += speed;
+	}
+
+	if (kbd.KeyIsPressed(VK_LEFT)) {
+		x -= speed;
+	}
+}
+
+void Dude::ClampScreen()
+{
+	const int right = x + width;
+	const int bottom = y + height;
+
+	if (right > Graphics::ScreenWidth) {
+		x = Graphics::ScreenWidth - width;
+	}
+
+	else if (x < 0) {
+		x = 0;
+	}
+
+	if (bottom > Graphics::ScreenHeight) {
+		y = Graphics::ScreenHeight - height;
+	}
+
+	else if (y < 0) {
+		y = 0;
+	}
+
+
+
+}

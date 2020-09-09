@@ -42,6 +42,8 @@ void Game::Go()
 
 void Game::UpdateModel()
 {
+    dude.Move(wnd.kbd);
+    dude.ClampScreen();
 }
 
 void Game::ComposeFrame()
