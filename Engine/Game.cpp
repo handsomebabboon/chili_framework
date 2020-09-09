@@ -24,7 +24,11 @@
 Game::Game( MainWindow& wnd )
 	:
 	wnd( wnd ),
-	gfx( wnd )
+	gfx( wnd ),
+    rng(rd()),
+    xDist(0,770),
+    yDist(0,570),
+    dude(xDist(rng),yDist(rng))
 {
 }
 
@@ -42,4 +46,5 @@ void Game::UpdateModel()
 
 void Game::ComposeFrame()
 {
+    dude.Draw(gfx);
 }

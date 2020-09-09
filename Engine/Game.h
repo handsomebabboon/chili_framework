@@ -23,7 +23,8 @@
 #include "Keyboard.h"
 #include "Mouse.h"
 #include "Graphics.h"
-
+#include <random>
+#include "Dude.h"
 class Game
 {
 public:
@@ -42,5 +43,12 @@ private:
 	Graphics gfx;
 	/********************************/
 	/*  User Variables              */
+    std::random_device rd;
+    std::mt19937 rng;
+    std::uniform_int_distribution<int> xDist;
+    std::uniform_int_distribution<int> yDist;
+    
+    Dude dude;
+
 	/********************************/
 };
